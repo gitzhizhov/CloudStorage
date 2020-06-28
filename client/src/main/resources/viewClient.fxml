@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<VBox alignment="center" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="view.Controller">
+    <MenuBar>
+        <Menu text="Файл">
+            <MenuItem text="Выход" onAction="#exitAction"/>
+        </Menu>
+    </MenuBar>
+    <SplitPane dividerPositions="0.5" VBox.vgrow="ALWAYS">
+        <items>
+            <AnchorPane>
+                <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                      AnchorPane.topAnchor="0.0">
+                    <HBox>
+                        <ComboBox/>
+                        <TextField editable="false" HBox.hgrow="ALWAYS"/>
+                        <Button text="Вверх"/>
+                    </HBox>
+                    <TableView VBox.vgrow="ALWAYS"/>
+                </VBox>
+            </AnchorPane>
+            <AnchorPane>
+                <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                      AnchorPane.topAnchor="0.0">
+                    <HBox>
+                        <TextField editable="false" HBox.hgrow="ALWAYS"/>
+                        <Button text="Вверх"/>
+                    </HBox>
+                    <TableView VBox.vgrow="ALWAYS"/>
+                </VBox>
+            </AnchorPane>
+        </items>
+    </SplitPane>
+    <HBox spacing="5">
+        <Button maxWidth="Infinity" text="Копировать" HBox.hgrow="ALWAYS"/>
+        <Button maxWidth="Infinity" text="Переместить" HBox.hgrow="ALWAYS"/>
+        <Button maxWidth="Infinity" text="Удалить" HBox.hgrow="ALWAYS"/>
+        <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+        </padding>
+    </HBox>
+</VBox>
